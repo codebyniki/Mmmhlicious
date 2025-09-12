@@ -1,0 +1,83 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+.dart_tool/
+
+# Android
+android/.gradle/
+android/captures/
+android/app/debug/
+android/app/profile/
+android/app/release/
+*.keystore
+
+# iOS
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/App.framework
+ios/.symlinks/
+ios/Pods/
+ios/Runner.xcworkspace/
+ios/build/
+ios/.generated/
+*.xcworkspace
+*.xcuserstate
+
+# macOS
+macos/Flutter/Flutter.framework
+macos/Flutter/Flutter.podspec
+macos/Flutter/GeneratedPluginRegistrant.swift
+macos/.symlinks/
+macos/Pods/
+macos/build/
+*.xcworkspace
+*.xcuserstate
+
+# Linux
+linux/flutter/
+linux/ephemeral/
+linux/build/
+
+# Windows
+windows/flutter/
+windows/ephemeral/
+windows/build/
+
+# Web
+web/.dart_tool/
+web/build/
+
+# VS Code
+.vscode/
+
+# IntelliJ/Android Studio
+.idea/
+*.iml
+
+# Firebase
+.firebase/
+
+# Others
+*.log
+*.tmp
+*.swp
+*.lock
+
+# Coverage
+coverage/
+
+# Environment
+.env
+.env.*
+
+# Crashlytics or fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
