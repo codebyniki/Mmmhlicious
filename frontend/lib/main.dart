@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/screens/homeScreen.dart';
+import 'package:frontend/screens/splashScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -61,7 +62,7 @@ class MyApp extends StatelessWidget {
         colorScheme: scheme,
         useMaterial3: true,
       ),
-      home: const HomeScreen(title: 'Mmmhlicious'),
+      home: SplashScreen(),
     );
   }
 }
