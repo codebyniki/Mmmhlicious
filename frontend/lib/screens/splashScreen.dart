@@ -71,7 +71,7 @@ class SplashScreen extends StatelessWidget {
 
       nextScreen: const HomeScreen(),
       splashIconSize: size.longestSide,
-      duration: 14000,
+      duration: 3200,
       splashTransition: SplashTransition.fadeTransition,
       backgroundColor: colorScheme.primary,
     );

@@ -43,6 +43,12 @@ class MyApp extends StatelessWidget {
         foregroundColor: scheme.onSurfaceVariant,        // S5
       ),
 
+      fontFamily: 'Montserrat',
+      textTheme: const TextTheme(
+        bodyLarge: TextStyle(fontSize: 16),
+        titleLarge: TextStyle(fontWeight: FontWeight.bold),
+      ),
+
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: scheme.primary,   // S1
