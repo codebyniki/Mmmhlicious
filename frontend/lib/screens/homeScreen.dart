@@ -1,25 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:frontend/widgets/buttons/primaryButton.dart';
 import 'package:frontend/widgets/buttons/squareButton.dart';
 import 'package:frontend/widgets/cards/recipeCard.dart';
 import 'package:frontend/widgets/grids/homeGrid.dart';
+import 'package:frontend/widgets/navigation/navbar.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 
 import '../model/recipe.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final insets = MediaQuery.of(context).padding;
     final colorScheme = Theme.of(context).colorScheme;
-    Recipe communityFavorite = Recipe.create(
+
+    final communityFavorite = Recipe.create(
       id: 1,
       title: 'Sandwich with boiled egg',
       imageUrl: 'assets/images/food-placeholder.png',
@@ -29,26 +29,25 @@ class _HomeScreenState extends State<HomeScreen> {
       steps: [],
       cookingTime: 12,
       likes: 14352,
-      comments: 456
+      comments: 456,
     );
 
-    return Scaffold(
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.only(top: 60, bottom: 40),
+    // Pad bottom a bit so content doesn't hide behind the bar
+    const contentBottom = 24.0;
+
+    return SafeArea(
+      bottom: false,
+      child: SingleChildScrollView(
+        padding: EdgeInsets.only(top: 16, bottom: contentBottom + insets.bottom),
         child: Center(
-          child: SizedBox(
-            width: size.width * 0.85,
-            height: size.height - 20,
+          child: ConstrainedBox(
+            constraints: BoxConstraints(maxWidth: size.width * 0.85),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                SvgPicture.asset(
-                  'assets/images/logo.svg',
-                  width: 140,
-                  alignment: Alignment.topCenter,
-                ),
+              children: [
+                SvgPicture.asset('assets/images/logo.svg', width: 140),
                 Text(
-                  'Hey Max! Let’s get cooking!',
+                  'Hey Max! Let\'s get cooking!',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Montserrat',
@@ -61,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   width: double.infinity,
                   child: Text(
-                    'Your kitchen adventures await. What’s on the menu today?',
+                    'Your kitchen adventures await. What\'s on the menu today?',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: 'Montserrat',
@@ -91,6 +90,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   wide: true,
                   icon: 'assets/images/FavoriteRecipeCard_3DIcon.png',
                 ),
+                const SizedBox(height: 20),
+                const PrimaryButton(text: 'Recipes by Country', icon: IconsaxPlusBold.direct_right),
+                const SizedBox(height: 20),
               ],
             ),
           ),

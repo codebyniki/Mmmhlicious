@@ -68,7 +68,7 @@ class MyApp extends StatelessWidget {
         colorScheme: scheme,
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }

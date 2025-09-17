@@ -15,6 +15,7 @@ dependencies:
   flutter_svg:
   simple_shadow:
   iconsax_plus:
+  animated_bottom_navigation_bar:
 
 dev_dependencies:
   flutter_test:
