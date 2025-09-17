@@ -14,6 +14,7 @@ dependencies:
   animated_splash_screen:
   flutter_svg:
   simple_shadow:
+  iconsax_plus:
 
 dev_dependencies:
   flutter_test:
